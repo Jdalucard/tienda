@@ -2,7 +2,7 @@ export const ProductsData=[
   {
     id:1,
     price:20,
-    amount:5,
+    amount:0,
     name:'tacos',
     img :'https://img.freepik.com/foto-gratis/tacos-mexicanos-carne-res-salsa-tomate-salsa_2829-14221.jpg?w=996&t=st=1662757089~exp=1662757689~hmac=ef38fa5348b0c8367a516be92e0d2c932cb8fc8332d6bb091da146a88661dba2'
   

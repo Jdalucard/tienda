@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 
-const CartContext = createContext();
+ export const CartContext = createContext();
 
-export const CartProvider = ({ children }) => {
+const CartProvider = ({ children }) => {
   const [cartItems, setcardItem] = useState(() => {
     //local storage
     try {
@@ -15,13 +15,13 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("cartProducts", JSON.stringify(cartItems));
+    console.log(cartItems)
   }, [cartItems]);
 
   ///añadir productos
-
-                    const addItemTocart = (product) => {
-                const inCart = cartItems.find(
-                  (productInCart) => productInCart.id === product.id
+   const addItemTocart = (product) => {
+    const inCart = cartItems.find(
+   (productInCart) => productInCart.id === product.id
                 );
 
                 if (inCart) {
@@ -60,3 +60,5 @@ export const CartProvider = ({ children }) => {
     )
   };
 
+
+  export default CartProvider

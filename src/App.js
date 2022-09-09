@@ -3,11 +3,15 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./styles/styles.css"; 
 import './styles/App.scss';
+import  CartProvider  from './context/CartContext'
 
 function App() {
   return (
     <>
+
+    <CartProvider>
       <Rutas/>
+      </CartProvider>
      
     </>
   );

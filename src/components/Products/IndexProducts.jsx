@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 import ProductsData from '../../data/Productsdata'
 
 import styles from './style.module.scss'
 
 const IndexProducts = () => {
- 
+ const {addItemTocart}=useContext(CartContext)
   return (
     <>
     <div className={styles.productsContainer}>
@@ -18,7 +19,7 @@ const IndexProducts = () => {
               {product.name} -${product.price}
             </p>
           </div>
-          <button onClick={()=>console.log(product)}> Agregar al carro</button>
+          <button onClick={()=>addItemTocart(product)}> Agregar al carro</button>
       </div>
      
       ))} 
