@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
+import CartContext  from '../../context/CartContext'
 import ProductsData from '../../data/Productsdata'
 
 import styles from './style.module.scss'

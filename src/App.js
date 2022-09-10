@@ -2,8 +2,8 @@ import Rutas from "./router/rutas";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./styles/styles.css"; 
-import './styles/App.scss';
-import  CartProvider  from './context/CartContext'
+
+import  {CartProvider} from './context/CartContext'
 
 function App() {
   return (
