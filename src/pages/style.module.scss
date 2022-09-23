@@ -1,3 +1,7 @@
+.Titulo{
+ font-size: 18rem;
+}
+ 
  .home{
   width: 100vw;
   height: 100vh;
@@ -5,3 +9,25 @@
   align-items: center;
   flex-direction: column;
 } 
+
+.singup{
+  margin-top: 80px;
+  width: 60%;  
+  justify-content: center;
+  line-height: 1.5;
+  text-align: center;
+  align-items: center;
+  margin-left: 20%;
+  }
+/*   .singup input{
+    
+  } */
+
+  .login{
+    margin-top: 80px;
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+    margin-left: 20%;
+
+  }

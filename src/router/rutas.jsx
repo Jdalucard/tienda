@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import LoginPage from "../pages/LoginPage";
 import Nav from "../components/Nav";
 import Tienda from "../components/Tienda";
+import SingUpPage from "../pages/SingUpPage";
 
 
 const Rutas = () => {
@@ -16,6 +17,7 @@ const Rutas = () => {
           <Route path="/" element={<Home />} />
 
           <Route path="/Login" element={<LoginPage/>}/>
+          <Route path="/SingUp" element ={<SingUpPage/>}/>
           <Route path="/Tienda" element={<Tienda/>}/>
 
 

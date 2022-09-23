@@ -1,17 +1,20 @@
 import Rutas from "./router/rutas";
+import  {CartProvider} from './context/CartContext'
+import {AuthProvider} from "./context/AuthContext"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./styles/styles.css"; 
 
-import  {CartProvider} from './context/CartContext'
+
 
 function App() {
   return (
     <>
-
+<AuthProvider>
     <CartProvider>
       <Rutas/>
       </CartProvider>
+</AuthProvider>
      
     </>
   );
