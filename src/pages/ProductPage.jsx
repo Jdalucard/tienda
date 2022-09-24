@@ -1,18 +1,32 @@
-import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
-import { ProductContext } from "../context/ContexProducts";
+import React from "react";
+
+import ProductForm from "../components/ProductForm";
+import ProductList from "../components/ProductList";
 
 
+const  Productspage = () => {
 
-const Productpage = () => {
-  const {id}=useParams();
-  const {obtenerProductos}=useContext(ProductContext)
-  
   return(<>
 
+  
 
+    <main className="row ">
+        <article className="col-md-6">
+
+        <ProductForm/> 
+        </article>     
+
+
+            <section className="row ">
+        <article className="col-md-6">
+   
+        
+        <ProductList/> 
+        </article>     
+      </section>
+      </main>
 
   </>)
 };
 
-export default Productpage;
+export default Productspage;

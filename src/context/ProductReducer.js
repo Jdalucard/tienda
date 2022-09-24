@@ -6,6 +6,12 @@ const reducer = (productosGlobales, action) => {
         products: action.payload,
       };
 
+    case "UN_PRODUCTO":
+      return {
+        ...productosGlobales,
+        product: action.payload,
+      };
+
     default:
       return productosGlobales;
   }

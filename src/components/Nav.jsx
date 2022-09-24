@@ -56,6 +56,16 @@ const Nav = () => {
                     Login
                   </NavLink>
                 </li>
+
+                <li className="nav-item">
+                  <NavLink
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/products"
+                  >
+                    Producto
+                  </NavLink>
+                </li>
            
                 <li className="nav-item">
                   <NavLink className="navbar-brand" to="/SingUp">

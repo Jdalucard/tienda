@@ -6,6 +6,8 @@ import LoginPage from "../pages/LoginPage";
 import Nav from "../components/Nav";
 import Tienda from "../components/Tienda";
 import SingUpPage from "../pages/SingUpPage";
+import Productspage from "../pages/ProductPage";
+import PageProduct from "../pages/PageProduct"
 
 
 const Rutas = () => {
@@ -19,6 +21,8 @@ const Rutas = () => {
           <Route path="/Login" element={<LoginPage/>}/>
           <Route path="/SingUp" element ={<SingUpPage/>}/>
           <Route path="/Tienda" element={<Tienda/>}/>
+          <Route path="/products" element={<Productspage/>}/>
+          <Route path="/products/:id" element={<PageProduct/>}/>
 
 
        

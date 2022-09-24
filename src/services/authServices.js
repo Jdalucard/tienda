@@ -5,6 +5,7 @@ export const loginServices = async (formulario) => {
     "https://backecomerce.onrender.com/api/auth/login",
     formulario
   );
+  console.log(resp)
   return resp.data;
 };
 
