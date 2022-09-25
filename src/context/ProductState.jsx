@@ -5,7 +5,8 @@ import {
   obtenerProductosService,
   crearProductoservices,
   actulizarProductoServices,
-  unProductoServices,eliminarProcutosservices
+  unProductoServices,
+  eliminarProcutosservices,
 } from "../services/ProductServices";
 
 const initialState = {
@@ -27,10 +28,12 @@ const initialState = {
 const Productstate = ({ children }) => {
   const [productosGlobales, dispatch] = useReducer(reducer, initialState);
 
+  console.log(productosGlobales)
+
   // formulario
   const obtenerProductos = useCallback(async () => {
     const resp = await obtenerProductosService();
- 
+
     const productos = resp.datos.map((obj) => {
       return {
         id: obj.id,
@@ -51,52 +54,51 @@ const Productstate = ({ children }) => {
   }, []);
 
   const crearProducto = async (formulario) => {
-    await crearProductoservices(formulario);
-    await obtenerProductos();
+    try {
+      await crearProductoservices(formulario);
+      await obtenerProductos();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
+  const unProducto = useCallback(async (idProducto) => {
+    const resp = await unProductoServices(idProducto);
 
+    const producto = {
+      id: resp.datos.id,
+      nombre: resp.datos.nombre,
+      descripcion: resp.datos.descripcion,
+      precio: resp.datos.precio,
+      cantidad: resp.datos.cantidad,
+      createdAt: resp.datos.createdAt,
+      updatedAt: resp.datos.updatedAt,
+      image: resp.datos.image.secure_url,
+    };
+    dispatch({
+      type: "UN_PRODUCTO",
+      payload: producto,
+    });
+  }, []);
 
-    const  unProducto=useCallback(async(idProducto)=>{
-        const resp = await unProductoServices(idProducto);
-
-      
-        const producto={
-          id:resp.datos.id,
-          nombre:resp.datos.nombre,
-          descripcion:resp.datos.descripcion,
-          precio:resp.datos.precio,
-          cantidad:resp.datos.cantidad,
-          createdAt: resp.datos.createdAt,
-          updatedAt: resp.datos.updatedAt,
-          image: resp.datos.image,
-        }
-        dispatch({
-          type: "UN_PRODUCTO",
-          payload:producto
-        })
-    },[]);
-
-
-//1 producto
+  //1 producto
   const actulizarProducto = async (id, formulario) => {
     try {
       await actulizarProductoServices(id, formulario);
       await obtenerProductos();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-
   };
 
-  const eliminarProducto= async(id)=>{
- try {
-  await eliminarProcutosservices (id)
-  await obtenerProductos();
- } catch (error) {
-console.log(error)
- }
-  }
+  const eliminarProducto = async (id) => {
+    try {
+      await eliminarProcutosservices(id);
+      await obtenerProductos();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <ProductContext.Provider
@@ -108,8 +110,6 @@ console.log(error)
         eliminarProducto,
         product: productosGlobales.product,
         actulizarProducto,
-      
-        
       }}
     >
       {children}

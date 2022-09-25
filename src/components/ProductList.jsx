@@ -22,7 +22,8 @@ const ProductList = () => {
           <p>{elemento.cantidad}</p>
           <p>{elemento.createdAt}</p>
           <p>{elemento.updatedAt}</p>
-
+          {elemento.image && <img    alt={elemento.nombre} src={elemento.image.url}/>}
+     
           <NavLink to={`/products/${elemento.id}`} className="btn btn-info">
             Ver mas...
           </NavLink>
@@ -34,7 +35,9 @@ const ProductList = () => {
           </button>
         </li>
       ))}
+      
     </ul>
+    
   );
 };
 
