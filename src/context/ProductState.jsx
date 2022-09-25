@@ -5,7 +5,7 @@ import {
   obtenerProductosService,
   crearProductoservices,
   actulizarProductoServices,
-  unProductoServices
+  unProductoServices,eliminarProcutosservices
 } from "../services/ProductServices";
 
 const initialState = {
@@ -30,7 +30,7 @@ const Productstate = ({ children }) => {
   // formulario
   const obtenerProductos = useCallback(async () => {
     const resp = await obtenerProductosService();
-
+ 
     const productos = resp.datos.map((obj) => {
       return {
         id: obj.id,
@@ -57,8 +57,10 @@ const Productstate = ({ children }) => {
 
 
 
-    const  unProducto=useCallback(async(id)=>{
-        const resp = await unProductoServices(id);
+    const  unProducto=useCallback(async(idProducto)=>{
+        const resp = await unProductoServices(idProducto);
+
+      
         const producto={
           id:resp.datos.id,
           nombre:resp.datos.nombre,
@@ -78,10 +80,23 @@ const Productstate = ({ children }) => {
 
 //1 producto
   const actulizarProducto = async (id, formulario) => {
-    await actulizarProductoServices(id, formulario);
-    await obtenerProductos();
+    try {
+      await actulizarProductoServices(id, formulario);
+      await obtenerProductos();
+    } catch (error) {
+      console.log(error)
+    }
+
   };
 
+  const eliminarProducto= async(id)=>{
+ try {
+  await eliminarProcutosservices (id)
+  await obtenerProductos();
+ } catch (error) {
+console.log(error)
+ }
+  }
 
   return (
     <ProductContext.Provider
@@ -90,9 +105,11 @@ const Productstate = ({ children }) => {
         obtenerProductos,
         crearProducto,
         unProducto,
-       
+        eliminarProducto,
         product: productosGlobales.product,
         actulizarProducto,
+      
+        
       }}
     >
       {children}

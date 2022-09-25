@@ -4,10 +4,11 @@ import {NavLink} from 'react-router-dom'
 
 
 
-const ProductList = () => {
-   const {products, obtenerProductos, } = useContext(ProductContext);
 
-console.log(products)
+const ProductList = () => {
+   const {products, obtenerProductos, eliminarProducto } = useContext(ProductContext);
+
+
 
 
 /* A hook that is called after the first render. */
@@ -18,18 +19,20 @@ obtenerProductos();
   return (
     <ul>
 
-  {products.map((elemento) => (
+ {products.map((elemento) => (
       <li key={elemento.id}>
         <h1>{elemento.id}</h1>
-        <h2>{elemento.precio}</h2>
         <p>{elemento.nombre}</p>
+        <h2>{elemento.precio}</h2>
+        <p>{elemento.descripcion}</p>
+        <p>{elemento.cantidad}</p>
         <p>{elemento.createdAt}</p>
         <p>{elemento.updatedAt}</p>
    
         
      
        <NavLink to={`/products/${elemento.id}`} className="btn btn-info">Ver mas...</NavLink>
-        <button
+        <button onClick={()=>eliminarProducto(elemento.id)}
           className="btn btn-danger"
           
         >

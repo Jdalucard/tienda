@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import ProductContext from "../context/ProductContext";
+import Titulos from "./Titulos";
 
 const initForm = {
   nombre: "",
@@ -12,6 +13,8 @@ const initForm = {
 const ProductFormEdit = () => {
   const [formulario, setformulario] = useState(initForm);
   const { product, actulizarProducto } = useContext(ProductContext);
+
+
 
   const handleForm = async (evento) => {
     evento.preventDefault();
@@ -29,7 +32,8 @@ useEffect(()=>{
 },[product])
 
   return (<>
-
+    
+    <Titulos titulo={"Editar los productos"}></Titulos>
 <form className="w-100" onSubmit={handleForm}>
       <div className="mb-3">
         <label htmlFor="inputID" className="form-label">
@@ -42,7 +46,7 @@ useEffect(()=>{
           name="id"
           value={formulario.id}
           onChange={actualizar}
-          readOnly
+    
         />
       </div>
       <div className="mb-3">
@@ -53,7 +57,7 @@ useEffect(()=>{
           type="text"
           className="form-control"
           id="inputName"
-          name="name"
+          name="nombre"
           value={formulario.nombre}
           onChange={actualizar}
         />
@@ -64,7 +68,7 @@ useEffect(()=>{
         </label>
         <input
           type="text"
-          name="description"
+          name="descripcion"
           className="form-control"
           id="inputDescription"
           value={formulario.descripcion}
@@ -77,7 +81,7 @@ useEffect(()=>{
         </label>
         <input
           type="nomber"
-          name="price"
+          name="precio"
           className="form-control"
           id="inputPrice"
           value={formulario.precio}

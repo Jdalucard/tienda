@@ -39,7 +39,7 @@ const actualizar=(evento)=>{
   <Titulos titulo={"Pagina de los productos"}></Titulos>
   {({setfieValue})=>{    }} 
   <form className="w-100" onSubmit={handleForm}>
-  
+  <Titulos titulo={"Pagina de los productos"}></Titulos>
       <div className="mb-3">
         <label htmlFor="inputName" className="form-label">
           Nombre

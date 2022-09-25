@@ -27,18 +27,20 @@ export const crearProductoservices = async (formulario) => {
 
 export const unProductoServices = async (id) => {
   const resp = await axios.get(
-    `https://backecomerce.onrender.com/api/products/ ${id}`,
+    `https://backecomerce.onrender.com/api/products/${id}`,
     {
       header: {
         "auth-token ": localStorage.getItem("token"),
       },
     }
   );
+
+  return resp.data;
 };
 
 export const actulizarProductoServices = async (id, formulario) => {
   const resp = await axios.post(
-    `https://backecomerce.onrender.com/api/products/ ${id}`,
+    `https://backecomerce.onrender.com/api/products/${id}`,
     formulario,
     {
       headers: {
@@ -46,5 +48,19 @@ export const actulizarProductoServices = async (id, formulario) => {
       },
     }
   );
+  console.log(resp);
+  return resp.data;
+};
+
+export const eliminarProcutosservices = async (id) => {
+  const resp = await axios.delete(
+    `https://backecomerce.onrender.com/api/products/${id}`,
+    {
+      headers: {
+        "auth-token": localStorage.getItem("token"),
+      },
+    }
+  );
+
   return resp.data;
 };

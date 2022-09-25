@@ -6,13 +6,13 @@ import ProductFormEdit from "../components/ProductFormEdit";
 
 const ProductPage = () => {
   const { id } = useParams();
-  const { obtenerProducto, product,  } =
+  const { unProducto, product,  } =
     useContext(ProductContext);
 
 
   useEffect(() => {
-    obtenerProducto(id);
-  }, [id, obtenerProducto]);
+    unProducto(id);
+  }, [id, unProducto]);
 
   return (
     <>
@@ -26,19 +26,14 @@ const ProductPage = () => {
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/1200px-Imagen_no_disponible.svg.png"
               className="card-img-top"
-              alt={product.name}
+              alt={product.nombre}
             />
             <div className="card-body">
-              <h5 className="card-title">{product.name}</h5>
+              <h5 className="card-title">{product.nombre}</h5>
               <p className="card-text">{product.description}</p>
-              <p className="card-text">{product.price}</p>
-              <button
-                type="button"
-                className="btn btn-primary"
-               
-              >
-                Agregar al carrito
-              </button>
+              <p className="card-text">{product.precio}</p>
+              <p className="card-text">{product.cantidad}</p>
+            
             </div>
           </div>
         </article>
