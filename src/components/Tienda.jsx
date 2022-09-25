@@ -1,10 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+
 
 const Tienda = () => {
 
   return (
 <>
+
+
+
+
 {/* <div className="card" style={{width: '18rem'}}>
   <img src={require('../Img/Productos/ImagenReducidas/fideosreducidos.jpg')} className="card-img-top" alt="hp." />
   <div className="card-body">

@@ -2,6 +2,7 @@ import React from "react";
 
 import ProductForm from "../components/ProductForm";
 import ProductList from "../components/ProductList";
+import ProductFormtwo from "../components/ProductFormTwo";
 
 
 const  Productspage = () => {
@@ -14,6 +15,7 @@ const  Productspage = () => {
         <article className="col-md-6">
 
         <ProductForm/> 
+        <ProductFormtwo/>
         </article>     
 
 

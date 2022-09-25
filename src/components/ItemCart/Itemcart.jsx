@@ -14,8 +14,8 @@ const Itemcart = ({ item }) => {
         <div className={styles.left}>
           <p>{item.name}</p>
           <div className={styles.buttons}>
-            <button onClick={() => addItemTocart(item)}>AGREGAR</button>
-            <button onClick={() => deleteItemToCart(id)}>SACAR</button>
+            <button onClick={() => addItemTocart(item)}>Agregar</button>
+            <button onClick={() => deleteItemToCart(id)}>Eliminar</button>
           </div>
         </div>
         <div className={styles.right}>
