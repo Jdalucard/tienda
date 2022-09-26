@@ -15,11 +15,11 @@ export const obtenerProductosService = async () => {
 
 export const crearProductoservices = async (formulario) => {
   const form = new FormData();
-
   for (let key in formulario) {
+
     form.append(key, formulario[key]);
   }
-   return await axios.post(
+  const resp= await axios.post(
     "https://backecomerce.onrender.com/api/products",
     formulario,
     {
@@ -29,7 +29,7 @@ export const crearProductoservices = async (formulario) => {
       },
     }
   );
-  
+  return resp.data;
 };
 
 export const unProductoServices = async (id) => {
@@ -46,12 +46,18 @@ export const unProductoServices = async (id) => {
 };
 
 export const actulizarProductoServices = async (id, formulario) => {
+/*   const form = new FormData();
+
+  for (let key in formulario) {
+    form.append(key, formulario[key]);
+  } */
   const resp = await axios.post(
     `https://backecomerce.onrender.com/api/products/${id}`,
     formulario,
     {
       headers: {
         "auth-token": localStorage.getItem("token"),
+        "Content-Type": "multipart/form-data",
       },
     }
   );

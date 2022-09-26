@@ -1,19 +1,25 @@
 import React, { useContext, useEffect } from "react";
 import ProductContext from "../context/ProductContext";
 import { NavLink } from "react-router-dom";
+import styles  from "./styles.scss/styles.module.scss" 
+
 
 const ProductList = () => {
   const { products, obtenerProductos, eliminarProducto } =
     useContext(ProductContext);
 
-  /* A hook that is called after the first render. */
+
   useEffect(() => {
     obtenerProductos();
   }, [obtenerProductos]);
 
+  console.log(products)
   return (
+
+    <>
+      <div className={styles.contenedorLista}>
     <ul>
-      {products.map((elemento) => (
+    {products.map((elemento) => (
         <li key={elemento.id}>
           <h1>{elemento.id}</h1>
           <p>{elemento.nombre}</p>
@@ -22,8 +28,7 @@ const ProductList = () => {
           <p>{elemento.cantidad}</p>
           <p>{elemento.createdAt}</p>
           <p>{elemento.updatedAt}</p>
-          {elemento.image && <img    alt={elemento.nombre} src={elemento.image.url}/>}
-     
+          {elemento.image && <img alt={elemento.nombre} src={elemento.image.secure_url}/>}
           <NavLink to={`/products/${elemento.id}`} className="btn btn-info">
             Ver mas...
           </NavLink>
@@ -37,7 +42,8 @@ const ProductList = () => {
       ))}
       
     </ul>
-    
+    </div>
+    </>
   );
 };
 

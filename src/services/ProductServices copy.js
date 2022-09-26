@@ -1,4 +1,4 @@
-import axios from "axios";
+/* import axios from "axios";
 
 export const obtenerProductosService = async () => {
   const resp = await axios.get(
@@ -63,4 +63,4 @@ export const eliminarProcutosservices = async (id) => {
   );
 
   return resp.data;
-};
+}; */

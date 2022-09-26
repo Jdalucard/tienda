@@ -41,8 +41,8 @@ const actualizo=(evento)=>{
   </div>
 
   <div className="mb-3">
-    <label htmlFor="exampleInputEmail1" className="form-label">Nombre de Usuario</label>
-    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required
+    <label htmlFor="exampleInputext" className="form-label">Nombre de Usuario</label>
+    <input type="text" className="form-control" id="exampleInputext" aria-describedby="emailHelp" required
     
     onChange={actualizo}
     value={formulario.nombre}

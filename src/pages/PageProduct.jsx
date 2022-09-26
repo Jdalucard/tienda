@@ -6,9 +6,10 @@ import ProductFormEdit from "../components/ProductFormEdit";
 
 const ProductPage = () => {
   const { id } = useParams();
-  const { unProducto, product,  } =
+  const { unProducto, product, } =
     useContext(ProductContext);
 
+    console.log(product)
 
   useEffect(() => {
     unProducto(id);
@@ -19,15 +20,11 @@ const ProductPage = () => {
   
       <main className="row pt-5">
         <article className="col-md-4">
-          <ProductFormEdit />
+          <ProductFormEdit/>
         </article>
-        <article className="col-md-8">
+        <article className="col-md-8 mt-5">
           <div className="card" style={{ width: "18rem" }}>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/1200px-Imagen_no_disponible.svg.png"
-              className="card-img-top"
-              alt={product.nombre}
-            />
+            {product.image && <img    alt={product.nombre} src={product.image.secure_url}/>}
             <div className="card-body">
               <h5 className="card-title">{product.nombre}</h5>
               <p className="card-text">{product.description}</p>

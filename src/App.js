@@ -9,6 +9,7 @@ import Productstate from "./context/ProductState";
 function App() {
   return (
     <>
+    
       <AuthProvider>
         <Productstate>
           <CartProvider>

@@ -1,8 +1,10 @@
 import React from "react";
-
 import ProductForm from "../components/ProductForm";
+import Formulario from "../components/Formulario";
+
+
 import ProductList from "../components/ProductList";
-import ProductFormtwo from "../components/ProductFormTwo";
+
 
 
 const  Productspage = () => {
@@ -13,9 +15,8 @@ const  Productspage = () => {
 
     <main className="row ">
         <article className="col-md-6">
-
-        <ProductForm/> 
-        <ProductFormtwo/>
+        <ProductForm/>
+<Formulario/>
         </article>     
 
 

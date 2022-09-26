@@ -1,19 +1,22 @@
-import React, { useContext, useEffect, useState } from "react";
+/* import React, { useContext, useEffect, useState } from "react";
 import ProductContext from "../context/ProductContext";
 import Titulos from "./Titulos";
+
 
 const initForm = {
   nombre: "",
   descripcion: "",
   precio: "",
   cantidad: "",
-  image: null,
+  image: {
+    public_id: null,
+    secure_url: null,
+  },
 };
 
 const ProductFormEdit = () => {
   const [formulario, setformulario] = useState(initForm);
   const { product, actulizarProducto } = useContext(ProductContext);
-
 
 
   const handleForm = async (evento) => {
@@ -113,6 +116,7 @@ useEffect(()=>{
           id="image"
           name='image'
           onChange={(evento)=>console.log("image",evento.target.files[0])}
+
         
         />
 
@@ -127,3 +131,4 @@ useEffect(()=>{
 };
 
 export default ProductFormEdit;
+ */

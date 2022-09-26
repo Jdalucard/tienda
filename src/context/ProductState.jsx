@@ -25,10 +25,11 @@ const initialState = {
     },
   },
 };
+
+
 const Productstate = ({ children }) => {
   const [productosGlobales, dispatch] = useReducer(reducer, initialState);
 
-  console.log(productosGlobales)
 
   // formulario
   const obtenerProductos = useCallback(async () => {
@@ -43,7 +44,7 @@ const Productstate = ({ children }) => {
         cantidad: obj.cantidad,
         createdAt: obj.createdAt,
         updatedAt: obj.updatedAt,
-        image: obj.image,
+        image: obj.image
       };
     });
 
@@ -73,7 +74,7 @@ const Productstate = ({ children }) => {
       cantidad: resp.datos.cantidad,
       createdAt: resp.datos.createdAt,
       updatedAt: resp.datos.updatedAt,
-      image: resp.datos.image.secure_url,
+      image: resp.datos.image
     };
     dispatch({
       type: "UN_PRODUCTO",
