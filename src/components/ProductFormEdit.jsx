@@ -1,8 +1,6 @@
-/* import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ProductContext from "../context/ProductContext";
 import Titulos from "./Titulos";
-
-
 const initForm = {
   nombre: "",
   descripcion: "",
@@ -13,17 +11,13 @@ const initForm = {
     secure_url: null,
   },
 };
-
 const ProductFormEdit = () => {
   const [formulario, setformulario] = useState(initForm);
   const { product, actulizarProducto } = useContext(ProductContext);
-
-
   const handleForm = async (evento) => {
     evento.preventDefault();
     await actulizarProducto(formulario.id, formulario);
   };
-
   const actualizar = (evento) => {
     setformulario({
       ...formulario,
@@ -33,7 +27,6 @@ const ProductFormEdit = () => {
 useEffect(()=>{
   setformulario(product)
 },[product])
-
   return (<>
     
     <Titulos titulo={"Editar los productos"}></Titulos>
@@ -91,7 +84,6 @@ useEffect(()=>{
           onChange={actualizar}
         />        
       </div>
-
       <div className="mb-3">
         <label htmlFor="inputPrice" className="form-label">
      Cantidad
@@ -105,7 +97,6 @@ useEffect(()=>{
           onChange={actualizar}
         />
       </div>
-
        <div className="mb-3">
         <label htmlFor="inputPrice" className="form-label">
         Subir Imagen
@@ -116,10 +107,8 @@ useEffect(()=>{
           id="image"
           name='image'
           onChange={(evento)=>console.log("image",evento.target.files[0])}
-
         
         />
-
 </div>
       <div className="mb-3 text-end">
         <button type="submit" className="btn btn-warning">
@@ -129,6 +118,4 @@ useEffect(()=>{
     </form>
   </>)
 };
-
 export default ProductFormEdit;
- */
