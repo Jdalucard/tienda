@@ -39,7 +39,7 @@ const ProductForm = () => {
           <Titulos titulo={"Pagina de los productos"}></Titulos>
           <div className="mb-3">
             <label htmlFor="inputName" className="form-label">
-              Nombre
+         
             </label>
             <input
               type="text"

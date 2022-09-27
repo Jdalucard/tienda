@@ -69,7 +69,7 @@ const Nav = () => {
            
                 <li className="nav-item">
                   <NavLink className="navbar-brand" to="/SingUp">
-                 Singup
+                 Registro
                   </NavLink>
                 </li>
                 <li className="nav-item dropdown">

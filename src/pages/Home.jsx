@@ -2,6 +2,7 @@ import React from 'react'
 /* import Tienda from '../components/Tienda' */
 
 import  Cart from '../components/Cart/Cart'
+import ProductList from '../components/ProductList'
 import IndexProducts from '../components/Products/IndexProducts'
 import style from './style.module.scss'
 
@@ -11,7 +12,9 @@ const Home = () => {
     <>
 <div className={style.home}>
     <Cart/>
-    <IndexProducts/>
+     <IndexProducts/> 
+    <ProductList />
+   
     </div>
 
 

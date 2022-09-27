@@ -46,11 +46,11 @@ export const unProductoServices = async (id) => {
 };
 
 export const actulizarProductoServices = async (id, formulario) => {
-/*   const form = new FormData();
+  const form = new FormData();
 
   for (let key in formulario) {
     form.append(key, formulario[key]);
-  } */
+  } 
   const resp = await axios.post(
     `https://backecomerce.onrender.com/api/products/${id}`,
     formulario,

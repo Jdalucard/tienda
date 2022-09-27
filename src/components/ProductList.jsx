@@ -16,7 +16,7 @@ const ProductList = () => {
     <>
       <div className={styles.contenedorLista}>
       {products.map((elemento) => (
-          <div className="card mb-3 ms-5  "  style={{ width: "25rem" }} >
+          <div className="card mb-3 ms-5 mt-5 "  style={{ width: "25rem" }} >
             
               <div className="elemento " key={elemento.id}>
                 {elemento.image && (
