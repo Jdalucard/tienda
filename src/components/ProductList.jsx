@@ -16,7 +16,7 @@ const ProductList = () => {
     <>
       <div className={styles.contenedorLista}>
       {products.map((elemento) => (
-          <div className="card mb-3 ms-5 mt-5 "  style={{ width: "25rem" }} >
+          <div className="card mb-3  mt-5  ms-3"  style={{ width: "21rem" }} >
             
               <div className="elemento " key={elemento.id}>
                 {elemento.image && (
@@ -33,11 +33,11 @@ const ProductList = () => {
                   <div className="ms-5">
                 <NavLink
                   to={`/products/${elemento.id}`}
-                  className="btn btn-info mb-3 ms-5 "
+                  className="btn btn-info mb-3 ms-1 "
                 >
-                  Ver mas...
+                  Ver mas...editor
                 </NavLink>
-
+                    
                 <button
                   onClick={() => eliminarProducto(elemento.id)}
                   className="btn  ms-3 btn-danger mb-3 "
@@ -46,6 +46,12 @@ const ProductList = () => {
                 </button>
                 </div>
               </div>
+              <NavLink
+                  to={`/productos/${elemento.id}`}
+                  className="btn btn-success mb-3 ms-5 "
+                >
+                  Ver mas  cliente 
+                </NavLink>
           </div>
           ))}
       </div>

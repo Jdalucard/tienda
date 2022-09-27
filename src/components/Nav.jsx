@@ -72,6 +72,11 @@ const Nav = () => {
                  Registro
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="navbar-brand" to="/PageProductClient">
+                 Producto Cliente
+                  </NavLink>
+                </li>
                 <li className="nav-item dropdown">
                   <NavLink
                     className="nav-link dropdown-toggle"

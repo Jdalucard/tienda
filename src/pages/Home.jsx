@@ -12,7 +12,8 @@ const Home = () => {
     <>
 <div className={style.home}>
     <Cart/>
-     <IndexProducts/> 
+    
+   <IndexProducts/>  
     <ProductList />
    
     </div>

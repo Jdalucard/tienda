@@ -1,6 +1,6 @@
 .contenedorLista {
   display: flex;
-  justify-content: start;
+
   flex-wrap: wrap;
 
   img {
@@ -9,9 +9,9 @@
   li {
     display: block;
   }
-    div{
-      display: block;
-    }
+  div {
+    display: block;
+  }
 }
 //formulario
 .container-fluid {
