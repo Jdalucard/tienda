@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import ProductContext from "../context/ProductContext";
 import CartList from "../components/CartList";
-import PaypalCheckoutButton from "../pages/PagePaypal"
+/* import PaypalCheckoutButton from "../pages/PagePaypal" */
 
 
 const CartPage = () => {
@@ -25,16 +25,16 @@ const CartPage = () => {
         <>
           <section className="row pt-5">
             <article className="col-md-12">
-              <h2 className="mb-3">Su total a pagar es {total}</h2>
+              <h2 className="">Su total a pagar es {total}</h2>
             </article>
           </section>
           <section className="row">
             <article className="col">
-              <PaypalCheckoutButton
+          {/*     <PaypalCheckoutButton
                 currency={"USD"}
                 amount={total}
                 showSpinner={false}
-              />
+              /> */}
             </article>
           </section>
         </>
