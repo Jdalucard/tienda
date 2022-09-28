@@ -16,7 +16,7 @@ const IndexProducts = () => {
           <img src={product.img} alt={product.name}/>
           <div>
             <p>
-              {product.name} -${product.price}
+              {product.name} ${product.price}
             </p>
           </div>
           <button onClick={()=>addItemTocart(product)}> Agregar al carro</button>
