@@ -72,9 +72,18 @@ const Nav = () => {
                  Registro
                   </NavLink>
                 </li>
+               
                 <li className="nav-item">
                   <NavLink className="navbar-brand" to="/PageProductClient">
                  Producto Cliente
+                  </NavLink>
+                </li>
+
+
+                <li className="nav-item">
+                  <NavLink className="navbar-brand" to="/CartPage">
+                
+                  Carrito
                   </NavLink>
                 </li>
                 <li className="nav-item dropdown">
@@ -124,6 +133,7 @@ const Nav = () => {
                 <button className="btn btn-success" type="submit">
                   Search
                 </button>
+
               </form>
             </div>
           </div>

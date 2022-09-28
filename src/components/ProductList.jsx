@@ -11,14 +11,14 @@ const ProductList = () => {
     obtenerProductos();
   }, [obtenerProductos]);
 
-  console.log(products);
+  
   return (
     <>
       <div className={styles.contenedorLista}>
       {products.map((elemento) => (
-          <div className="card mb-3  mt-5  ms-3"  style={{ width: "21rem" }} >
+          <div className="card mb-3  mt-5  ms-3"  key={elemento.id} style={{ width: "21rem" }} >
             
-              <div className="elemento " key={elemento.id}>
+              <div className="elemento ">
                 {elemento.image && (
                   <img alt={elemento.nombre} src={elemento.image.secure_url} />
                 )}

@@ -14,6 +14,7 @@ import SingUpPage from "../pages/SingUpPage";
 import Productspage from "../pages/ProductPage";
 import PageProduct from "../pages/PageProduct";
 import  PageProductClient from "../pages/PageProductClient";
+import CartPage from "../pages/CartPage";
 
 const Rutas = () => {
   return (
@@ -28,6 +29,7 @@ const Rutas = () => {
           <Route path="/Productos/:id" element={<PageProductClient/>}/>
           <Route path="/products" element={<Productspage />} />
           <Route path="/products/:id" element={<PageProduct />} />
+          <Route path="/CartPage" element={<CartPage />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

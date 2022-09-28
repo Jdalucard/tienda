@@ -24,6 +24,7 @@ const initialState = {
       secure_url: "",
     },
   },
+  cart:[],
 };
 
 
@@ -100,6 +101,28 @@ const Productstate = ({ children }) => {
       console.log(error);
     }
   };
+  
+  
+  const agregarProductoCarrito = (product) => {
+    const productoEncontrado = productosGlobales.cart.find(
+      (producto) => product.id === producto.id
+    );
+
+    if (!productoEncontrado) {
+      dispatch({
+        type: "AGREGAR_PRODUCTO_CARRITO",
+        payload: product,
+      });
+    }
+  };
+
+  
+  const eliminarProductoCarrito = (id) => {
+    dispatch({
+      type: "ELIMINAR_PRODUCTO_CARRITO",
+      payload: id,
+    });
+  };
 
   return (
     <ProductContext.Provider
@@ -111,6 +134,10 @@ const Productstate = ({ children }) => {
         eliminarProducto,
         product: productosGlobales.product,
         actulizarProducto,
+        agregarProductoCarrito,
+        cart:productosGlobales.cart,
+        eliminarProductoCarrito
+       
       }}
     >
       {children}
