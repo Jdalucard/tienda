@@ -1,4 +1,4 @@
-/* import { useEffect } from "react";
+ import { useEffect } from "react";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 
 // This values are the props in the UI
@@ -60,4 +60,4 @@ const PaypalCheckoutButton = ({ currency, amount, showSpinner }) => {
   );
 };
 
-export default PaypalCheckoutButton; */
+export default PaypalCheckoutButton; 
