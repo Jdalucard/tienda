@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-
+import Home from "./Home";
 import Titulos from "../components/Titulos";
 import { AuthContext } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+
 import style from "./style.module.scss";
 
 const initForm = {
@@ -14,13 +14,12 @@ const LoginPage = () => {
   const [formulario, setformulario] = useState(initForm);
   const { login /* autenticar */ } = useContext(AuthContext);
 
-  const navigate = useNavigate();
   const handleForm = async (evento) => {
     evento.preventDefault();
 
     const ingreso = await login(formulario);
     if (ingreso) {
-      navigate("/");
+      return <Home />;
     }
   };
 
