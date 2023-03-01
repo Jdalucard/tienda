@@ -18,8 +18,10 @@ const LoginPage = () => {
   const handleForm = async (evento) => {
     evento.preventDefault();
 
-    await login(formulario);
-    navigate("/");
+    const ingreso = await login(formulario);
+    if (ingreso) {
+      navigate("/");
+    }
   };
 
   const actualizo = (e) => {
