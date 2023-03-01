@@ -20,7 +20,7 @@ const LoginPage = () => {
 
     const ingreso = await login(formulario);
     if (ingreso) {
-      navigate("/");
+      return navigate("/");
     } else {
       alert("Debes Realizar el Ingreso a la pagina");
     }
