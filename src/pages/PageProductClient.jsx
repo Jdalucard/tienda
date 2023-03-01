@@ -66,7 +66,7 @@ const PageProductClient = () => {
               aria-labelledby="panelsStayOpen-headingOne"
             >
               <div className="accordion-body">
-                <strong>Tiyulo de la publicidad</strong>
+                <strong>Título de la publicidad</strong>
                 Puedes colocar una oferta comercial o promociones vigentes
                 <code></code>, overflow.
               </div>

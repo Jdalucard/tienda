@@ -7,8 +7,10 @@ const CartList = () => {
   const { cart, eliminarProductoCarrito } = useContext(ProductContext);
   return (
     <>
-      <h1>Resumen de tu compra</h1>
       <div className="table-responsive mt-4">
+        <div className="mt-5">
+          <h1>Resumen de tu compra</h1>
+        </div>
         <table className="table table-hover">
           <thead>
             <tr>

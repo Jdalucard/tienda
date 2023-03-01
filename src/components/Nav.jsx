@@ -6,8 +6,8 @@ const Nav = () => {
     <>
       <nav className="navbar navbar-dark bg-dark fixed-top">
         <div className="container-fluid">
-          <NavLink className="navbar-brand" to="#">
-          Tu Logo aqui
+          <NavLink className="navbar-brand fs-1" to="#">
+            Tu Logo aqui
           </NavLink>
           <button
             className="navbar-toggler"
@@ -25,8 +25,11 @@ const Nav = () => {
             aria-labelledby="offcanvasDarkNavbarLabel"
           >
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
-              Tu Logo aqui
+              <h5
+                className="offcanvas-title fs-3"
+                id="offcanvasDarkNavbarLabel"
+              >
+                Tu Logo aqui
               </h5>
               <button
                 type="button"
@@ -37,8 +40,7 @@ const Nav = () => {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-
-              <li className="nav-item">
+                <li className="nav-item fs-3">
                   <NavLink
                     className="nav-link active"
                     aria-current="page"
@@ -47,7 +49,7 @@ const Nav = () => {
                     Inicio
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item fs-3">
                   <NavLink
                     className="nav-link active"
                     aria-current="page"
@@ -59,36 +61,35 @@ const Nav = () => {
 
                 <li className="nav-item">
                   <NavLink
-                    className="nav-link active"
+                    className="nav-link active fs-3"
                     aria-current="page"
                     to="/products"
                   >
                     Producto
                   </NavLink>
                 </li>
-           
+
                 <li className="nav-item">
-                  <NavLink className="navbar-brand" to="/SingUp">
-                  Registrate
-                  </NavLink>
-                </li>
-               
-                <li className="nav-item">
-                  <NavLink className="navbar-brand" to="/PageProductClient">
-                 Producto Cliente
+                  <NavLink className="navbar-brand fs-3" to="/SingUp">
+                    Registrate
                   </NavLink>
                 </li>
 
-
                 <li className="nav-item">
-                  <NavLink className="navbar-brand" to="/CartPage">
-                
-                  Carrito
+                  <NavLink
+                    className="navbar-brand fs-3"
+                    to="/PageProductClient"
+                  >
+                    Producto Cliente
                   </NavLink>
                 </li>
-             
+
+                <li className="nav-item">
+                  <NavLink className="navbar-brand fs-3" to="/CartPage">
+                    Carrito
+                  </NavLink>
+                </li>
               </ul>
-              
             </div>
           </div>
         </div>
