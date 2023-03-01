@@ -21,8 +21,6 @@ const LoginPage = () => {
     const ingreso = await login(formulario);
     if (ingreso) {
       return navigate("/");
-    } else {
-      alert("Debes Realizar el Ingreso a la pagina");
     }
   };
 
