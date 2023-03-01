@@ -12,13 +12,14 @@ const initForm = {
 
 const LoginPage = () => {
   const [formulario, setformulario] = useState(initForm);
-  const { login, autenticar } = useContext(AuthContext);
+  const { login /* autenticar */ } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const handleForm = async (evento) => {
     evento.preventDefault();
 
     await login(formulario);
+    navigate("/");
   };
 
   const actualizo = (e) => {
@@ -28,15 +29,11 @@ const LoginPage = () => {
     });
   };
 
-  if (login) {
-    navigate("/");
-  }
-
   return (
     <>
       <form className={style.login} onSubmit={handleForm}>
-        <Titulos titulo="Pagina de logeo" />
-        <p>{autenticar.id}</p>
+        <Titulos titulo="Pagina de Ingresar para Comprar" />
+        {/*  <p>{autenticar.id}</p> */}
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
             Nombre de Usuario

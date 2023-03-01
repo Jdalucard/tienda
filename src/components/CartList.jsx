@@ -14,9 +14,9 @@ const CartList = () => {
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Nombre</th>
-              <th scope="col">descripcion</th>
-              <th scope="col">precio</th>
-              <th scope="col">Ver mas Productos</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Ver más productos</th>
               <th scope="col">Eliminar</th>
             </tr>
           </thead>

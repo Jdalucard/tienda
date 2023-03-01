@@ -23,8 +23,8 @@ const ProductPage = () => {
             {product.image && (
               <img alt={product.nombre} src={product.image.secure_url} />
             )}
-            <div className="card-body">
-              <p className="card-text">{product.id}</p>
+            <div className=" container-sm   card-body">
+              {/*   <p className="card-text">{product.id}</p> */}
               <h5 className="card-title">{product.nombre}</h5>
               <p className="card-text">{product.descripcion}</p>
               <p className="card-text">{product.precio}</p>

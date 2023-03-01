@@ -5,16 +5,15 @@ import { useParams } from "react-router-dom";
 
 const PageProductClient = () => {
   const { id } = useParams();
-  const { unProducto, product,agregarProductoCarrito } = useContext(ProductContext);
-
-
+  const { unProducto, product, agregarProductoCarrito } =
+    useContext(ProductContext);
 
   useEffect(() => {
     unProducto(id);
   }, [id, unProducto]);
 
   const AgregarAlCarro = () => {
-    agregarProductoCarrito(product)
+    agregarProductoCarrito(product);
   };
   return (
     <>
@@ -28,20 +27,19 @@ const PageProductClient = () => {
                   <img alt={product.nombre} src={product.image.secure_url} />
                 )}
                 <div className="card-body">
-                  <p className="card-text">{product.id}</p>
+                  {/*   <p className="card-text">{product.id}</p> */}
                   <h5 className="card-title">{product.nombre}</h5>
                   <p className="card-text">{product.descripcion}</p>
                   <p className="card-text">{product.precio}</p>
                   <p className="card-text">{product.cantidad}</p>
-               
-                    <button
-                      type="button"
-                      className="btn btn-info  p-2 ms-5 text-center "
-                      onClick={AgregarAlCarro}
-                    >
-                      Agregar al carro{" "}
-                    </button>
-                  
+
+                  <button
+                    type="button"
+                    className="btn btn-info  p-2 ms-5 text-center "
+                    onClick={AgregarAlCarro}
+                  >
+                    Agregar al carro{" "}
+                  </button>
                 </div>
               </div>
             </article>
@@ -59,7 +57,7 @@ const PageProductClient = () => {
                 aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseOne"
               >
-                Accordion Item #1
+                Precio o ofertas del producto #1
               </button>
             </h2>
             <div
@@ -68,15 +66,9 @@ const PageProductClient = () => {
               aria-labelledby="panelsStayOpen-headingOne"
             >
               <div className="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <strong>Tiyulo de la publicidad</strong>
+                Puedes colocar una oferta comercial o promociones vigentes
+                <code></code>, overflow.
               </div>
             </div>
           </div>
@@ -90,7 +82,7 @@ const PageProductClient = () => {
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseTwo"
               >
-                Accordion Item #2
+                Descripcion #2
               </button>
             </h2>
             <div
@@ -99,15 +91,9 @@ const PageProductClient = () => {
               aria-labelledby="panelsStayOpen-headingTwo"
             >
               <div className="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <strong>Descripcion.</strong>
+                <code></code>, aqui puedes colocar caracteristicas del tu
+                producto .
               </div>
             </div>
           </div>
@@ -121,7 +107,7 @@ const PageProductClient = () => {
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseThree"
               >
-                Accordion Item #3
+                Revision de clientes #3
               </button>
             </h2>
             <div
@@ -130,15 +116,9 @@ const PageProductClient = () => {
               aria-labelledby="panelsStayOpen-headingThree"
             >
               <div className="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <strong>calificacion clientes </strong> En esta seccion se puede
+                colocar comentarios o revisiones del productos de clientes
+                <code></code>,
               </div>
             </div>
           </div>
