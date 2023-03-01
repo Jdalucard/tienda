@@ -13,7 +13,7 @@ import Nav from "../components/Nav";
 import SingUpPage from "../pages/SingUpPage";
 import Productspage from "../pages/ProductPage";
 import PageProduct from "../pages/PageProduct";
-import  PageProductClient from "../pages/PageProductClient";
+import PageProductClient from "../pages/PageProductClient";
 import CartPage from "../pages/CartPage";
 
 const Rutas = () => {

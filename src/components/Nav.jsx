@@ -44,7 +44,7 @@ const Nav = () => {
                     aria-current="page"
                     to="/"
                   >
-                    Home
+                    Inicio
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -69,7 +69,7 @@ const Nav = () => {
            
                 <li className="nav-item">
                   <NavLink className="navbar-brand" to="/SingUp">
-                  SingUp
+                  Registrate
                   </NavLink>
                 </li>
                
@@ -86,55 +86,9 @@ const Nav = () => {
                   Carrito
                   </NavLink>
                 </li>
-                <li className="nav-item dropdown">
-                  <NavLink
-                    className="nav-link dropdown-toggle"
-                    to="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </NavLink>
-                  <ul className="dropdown-menu dropdown-menu-dark">
-                    <li>
-                      <NavLink className="dropdown-item" to="#">
-                        Another action
-                      </NavLink>{" "}
-                    </li>
-                    <li>
-                      <NavLink className="dropdown-item" to="#">
-                        Another action
-                      </NavLink>{" "}
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li>
-                      {" "}
-                      <NavLink
-                        className="nav-link active"
-                        aria-current="page"
-                        to="Login"
-                      >
-                        Loging
-                      </NavLink>
-                    </li>
-                  </ul>
-                </li>
+             
               </ul>
-              <form className="d-flex" role="search">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-success" type="submit">
-                  Search
-                </button>
-
-              </form>
+              
             </div>
           </div>
         </div>

@@ -1,25 +1,21 @@
-import React from 'react'
+import React from "react";
 /* import Tienda from '../components/Tienda' */
 
-import  Cart from '../components/Cart/Cart'
-import ProductList from '../components/ProductList'
-import IndexProducts from '../components/Products/IndexProducts'
-import style from './style.module.scss'
-
+/* import Cart from "../components/Cart/Cart"; */
+import ProductList from "../components/ProductList";
+/* import IndexProducts from "../components/Products/IndexProducts"; */
+import style from "./style.module.scss";
 
 const Home = () => {
   return (
     <>
-<div className={style.home}>
-    <Cart/>
-    
-   <IndexProducts/>  
-    <ProductList />
-   
-    </div>
+      <div className={style.home}>
+        {/*     <Cart/> */}
+        {/*   <IndexProducts /> */} */
+        <ProductList />
+      </div>
 
-
-  {/*  <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+      {/*  <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img src={require('../Img/Banner/2.png')} className="d-block w-100" alt="..." />
@@ -42,11 +38,9 @@ const Home = () => {
 </div>
  */}
 
+      {/*  <Tienda/> */}
+    </>
+  );
+};
 
-     {/*  <Tienda/> */}
-    
-      </>
-  )
-}
-
-export default Home
+export default Home;

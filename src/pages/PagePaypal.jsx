@@ -1,4 +1,4 @@
-/*  import { useEffect } from "react";
+import { useEffect } from "react";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 
 // This values are the props in the UI
@@ -21,12 +21,13 @@ const PaypalCheckoutButton = ({ currency, amount, showSpinner }) => {
         currency: currency,
       },
     });
-  }, [currency, showSpinner]);
+  }, []);
 
   return (
     <>
       {showSpinner && isPending && <div className="spinner" />}
       <PayPalButtons
+        className="container  m-xl-auto"
         style={style}
         disabled={false}
         forceReRender={[amount, currency, style]}
@@ -60,4 +61,4 @@ const PaypalCheckoutButton = ({ currency, amount, showSpinner }) => {
   );
 };
 
-export default PaypalCheckoutButton;  */
+export default PaypalCheckoutButton;
