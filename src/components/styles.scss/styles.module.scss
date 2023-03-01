@@ -1,14 +1,14 @@
 .contenedorLista {
   display: flex;
-
   flex-wrap: wrap;
+  margin-top: 50px;
 
   img {
     width: 100%;
+    object-fit: cover;
   }
   li {
     display: block;
-    font-size: 16px;
   }
   div {
     display: block;

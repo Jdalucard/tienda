@@ -33,7 +33,7 @@ const ProductList = () => {
               <div className="ms-5">
                 <NavLink
                   to={`/products/${elemento.id}`}
-                  className="btn btn-info mb-3 ms-1 "
+                  className="btn btn-info mb-3  "
                 >
                   Ver mas...editor
                 </NavLink>
