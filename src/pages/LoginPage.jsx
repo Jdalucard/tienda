@@ -20,7 +20,7 @@ const LoginPage = () => {
 
     const ingreso = await login(formulario);
     if (ingreso) {
-      return navigate("/");
+      navigate("/");
     }
   };
 
