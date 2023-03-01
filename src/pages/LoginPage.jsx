@@ -36,7 +36,7 @@ const LoginPage = () => {
   return (
     <>
       <form className={style.login} onSubmit={handleForm}>
-        <Titulos titulo="Pagina de Ingresar para Comprar" />
+        <Titulos titulo=" Ingresar para Comprar" />
         {/*  <p>{autenticar.id}</p> */}
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">

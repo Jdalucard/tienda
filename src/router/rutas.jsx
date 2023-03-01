@@ -26,7 +26,7 @@ const Rutas = () => {
 
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/SingUp" element={<SingUpPage />} />
-          <Route path="/Productos/:id" element={<PageProductClient/>}/>
+          <Route path="/Productos/:id" element={<PageProductClient />} />
           <Route path="/products" element={<Productspage />} />
           <Route path="/products/:id" element={<PageProduct />} />
           <Route path="/CartPage" element={<CartPage />} />
