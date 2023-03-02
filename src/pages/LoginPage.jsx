@@ -19,6 +19,7 @@ const LoginPage = () => {
     evento.preventDefault();
 
     await login(formulario);
+    navigate("/");
   };
 
   const actualizo = (e) => {
@@ -27,15 +28,6 @@ const LoginPage = () => {
       [e.target.name]: e.target.value,
     });
   };
-
-  /* seEffect(() => {
-    if (autenticar !== null) {
-      console.log("diferente a null");
-      navigate("/");
-    } else {
-      navigate("/login");
-    }
-  }); */
 
   return (
     <>
@@ -71,7 +63,7 @@ const LoginPage = () => {
         </div>
 
         <button type="submit" className="btn btn-dark">
-          {/*        {autenticar !== null ? navigate("/") : navigate("/login")} */}
+          {/*  {autenticar !== null ? navigate("/") : navigate("/login")} */}
           Enviar
         </button>
       </form>
