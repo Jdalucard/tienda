@@ -1,8 +1,8 @@
-import React, { useState, useContext } from "react";
-import Home from "./Home";
+import React, { useState, useContext /* useEffect */ } from "react";
+
 import Titulos from "../components/Titulos";
 import { AuthContext } from "../context/AuthContext";
-
+import { useNavigate } from "react-router-dom";
 import style from "./style.module.scss";
 
 const initForm = {
@@ -12,15 +12,13 @@ const initForm = {
 
 const LoginPage = () => {
   const [formulario, setformulario] = useState(initForm);
-  const { login /* autenticar */ } = useContext(AuthContext);
+  const { login, autenticar } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleForm = async (evento) => {
     evento.preventDefault();
 
-    const ingreso = await login(formulario);
-    if (ingreso) {
-      return <Home />;
-    }
+    await login(formulario);
   };
 
   const actualizo = (e) => {
@@ -29,6 +27,15 @@ const LoginPage = () => {
       [e.target.name]: e.target.value,
     });
   };
+
+  /* seEffect(() => {
+    if (autenticar !== null) {
+      console.log("diferente a null");
+      navigate("/");
+    } else {
+      navigate("/login");
+    }
+  }); */
 
   return (
     <>
@@ -64,6 +71,7 @@ const LoginPage = () => {
         </div>
 
         <button type="submit" className="btn btn-dark">
+          {autenticar !== null ? navigate("/") : navigate("/login")}
           Enviar
         </button>
       </form>

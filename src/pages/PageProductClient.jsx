@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import ProductContext from "../context/ProductContext";
-
+import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 const PageProductClient = () => {
@@ -17,10 +17,7 @@ const PageProductClient = () => {
   };
   return (
     <>
-      <div
-        className="
-      container d-flex  "
-      >
+      <div className=" container d-flex  ">
         <div className=" d-flex flex-wrap ">
           <main className="row pt-2">
             <article className="col-md-6"></article>
@@ -35,14 +32,15 @@ const PageProductClient = () => {
                   <p className="card-text">{product.descripcion}</p>
                   <p className="card-text">{product.precio}</p>
                   <p className="card-text">{product.cantidad}</p>
-
-                  <button
-                    type="button"
-                    className="btn btn-info  p-2 ms-5 text-center "
-                    onClick={AgregarAlCarro}
-                  >
-                    Agregar al carro{" "}
-                  </button>
+                  <NavLink to={"/CartPage"}>
+                    <button
+                      type="button"
+                      className="btn btn-info  p-2 ms-5 text-center "
+                      onClick={AgregarAlCarro}
+                    >
+                      Agregar al carro{" "}
+                    </button>
+                  </NavLink>
                 </div>
               </div>
             </article>
@@ -99,32 +97,6 @@ const PageProductClient = () => {
                   <strong>Descripcion.</strong>
                   <code></code>, aqui puedes colocar caracteristicas del tu
                   producto .
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="panelsStayOpen-headingThree">
-                <button
-                  className="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseThree"
-                  aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseThree"
-                >
-                  Revision de clientes #3
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseThree"
-                className="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingThree"
-              >
-                <div className="accordion-body">
-                  <strong>calificacion clientes </strong> En esta seccion se
-                  puede colocar comentarios o revisiones del productos de
-                  clientes
-                  <code></code>,
                 </div>
               </div>
             </div>

@@ -16,7 +16,7 @@ const ProductList = () => {
       <div className={styles.contenedorLista}>
         {products.map((elemento) => (
           <div
-            className="card mb-3  mt-5  ms-3"
+            className="card mb-2   ms-4"
             key={elemento.id}
             style={{ width: "21rem" }}
           >

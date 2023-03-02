@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext /* useState */ } from "react";
 import ProductContext from "../context/ProductContext";
 
 import { useParams } from "react-router-dom";
@@ -7,11 +7,25 @@ import ProductFormEdit from "../components/ProductFormEdit";
 const ProductPage = () => {
   const { id } = useParams();
   const { unProducto, product } = useContext(ProductContext);
+  /*   const producto = product; */
+  /*   const [Producto, setProducto] = useState(producto); */
 
   useEffect(() => {
     unProducto(id);
   }, [id, unProducto]);
 
+  if (
+    !product.nombre ||
+    !product.descripcion ||
+    product.precio ||
+    product.cantidad
+  ) {
+  }
+
+  useEffect(() => {}, []);
+  /*   useEffect(() => {}, []);
+  console.log(producto); */
+  console.log(product);
   return (
     <>
       <main className="row pt-5">

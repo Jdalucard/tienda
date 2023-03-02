@@ -3,6 +3,7 @@ import ProductContext from "../context/ProductContext";
 import CartList from "../components/CartList";
 import PaypalCheckoutButton from "../pages/PagePaypal";
 
+
 const CartPage = () => {
   const { cart } = useContext(ProductContext);
   const [total, setTotal] = useState(0);
