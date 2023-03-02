@@ -12,7 +12,7 @@ const initForm = {
 
 const LoginPage = () => {
   const [formulario, setformulario] = useState(initForm);
-  const { login, autenticar } = useContext(AuthContext);
+  const { login /* autenticar */ } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleForm = async (evento) => {

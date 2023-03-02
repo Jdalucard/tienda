@@ -1,18 +1,18 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import ProductContext from "../context/ProductContext";
 
 import { useParams } from "react-router-dom";
 import ProductFormEdit from "../components/ProductFormEdit";
 
 const ProductPage = () => {
-  const { unProducto, product } = useContext(ProductContext);
+  const { product, unProducto } = useContext(ProductContext);
 
   const { id } = useParams();
 
-  /*   useEffect(() => {
+  useEffect(() => {
     unProducto(id);
   }, [id, unProducto]);
- */
+
   //actulizar producto new
   /*   useEffect(() => {
     const obtenerProducto = async () => {

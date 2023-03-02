@@ -1,34 +1,42 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import ProductContext from "../context/ProductContext";
-/* import { NavLink } from "react-router-dom"; */
+import { useNavigate } from "react-router-dom";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 
 import { useParams } from "react-router-dom";
 
-const ProductFormEdit = () => {
-  const { id } = useParams();
-
-  const { actulizarProducto, unProducto, product } = useContext(ProductContext);
-
-  const [Producto, setproducto] = useState({
+/* const initialState = {
+  initialState: {
     nombre: "",
     descripcion: "",
     precio: "",
+    cantidad: "",
     image: {
-      public_id: "",
-      secure_url: "",
+      public_id: null,
+      secure_url: null,
     },
-  });
-  console.log(Producto);
+  },
+}; */
+
+const ProductFormEdit = () => {
+  const { actulizarProducto, unProducto, product /* crearProducto */ } =
+    useContext(ProductContext);
+
+  const { id } = useParams();
 
   useEffect(() => {
+    unProducto(id);
+  }, [id, unProducto]);
+  const navigate = useNavigate();
+
+  /* useEffect(() => {
     const obtenerProducto = async () => {
       const res = await unProducto(id);
       setproducto(res);
     };
     obtenerProducto();
-  }, [Producto]);
+  }, [Producto]); */
 
   return (
     <>
@@ -37,7 +45,7 @@ const ProductFormEdit = () => {
         <div className=" container mt-3 d-flex justify-content-center align-items-center">
           <Formik
             initialValues={{
-              product,
+              id,
               /*id: id,*/
             }}
             validationSchema={Yup.object({
@@ -46,8 +54,10 @@ const ProductFormEdit = () => {
                 "La descripcion es requerida "
               ),
             })}
-            onSubmit={async (formulario) => {
-              await actulizarProducto(id, formulario);
+            onSubmit={async (values, formulario, actions) => {
+              await actulizarProducto(id, values);
+              actions.setSubmitting(false);
+              navigate("/");
             }}
             enableReinitialize
           >
