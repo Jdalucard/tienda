@@ -13,13 +13,13 @@ const initForm = {
 const LoginPage = () => {
   const [formulario, setformulario] = useState(initForm);
   const { login /* autenticar */ } = useContext(AuthContext);
-  const navigate = useNavigate();
-
+  /* const navigate = useNavigate();
+   */
   const handleForm = async (evento) => {
     evento.preventDefault();
 
     await login(formulario);
-    navigate("/");
+    /*    navigate("/") */
   };
 
   const actualizo = (e) => {
