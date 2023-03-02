@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import ProductContext from "../context/ProductContext";
 /* import { NavLink } from "react-router-dom"; */
 import { Form, Formik, Field } from "formik";
@@ -9,9 +9,26 @@ import { useParams } from "react-router-dom";
 const ProductFormEdit = () => {
   const { id } = useParams();
 
-  const { actulizarProducto } = useContext(ProductContext);
+  const { actulizarProducto, unProducto, product } = useContext(ProductContext);
 
-  
+  const [Producto, setproducto] = useState({
+    nombre: "",
+    descripcion: "",
+    precio: "",
+    image: {
+      public_id: "",
+      secure_url: "",
+    },
+  });
+  console.log(Producto);
+
+  useEffect(() => {
+    const obtenerProducto = async () => {
+      const res = await unProducto(id);
+      setproducto(res);
+    };
+    obtenerProducto();
+  }, [Producto]);
 
   return (
     <>
@@ -20,7 +37,8 @@ const ProductFormEdit = () => {
         <div className=" container mt-3 d-flex justify-content-center align-items-center">
           <Formik
             initialValues={{
-              id: id,
+              product,
+              /*id: id,*/
             }}
             validationSchema={Yup.object({
               nombre: Yup.string().required("El titulo es requerido"),
@@ -40,6 +58,7 @@ const ProductFormEdit = () => {
                     className=" form-control"
                     name="nombre"
                     placeholder="Nombre"
+                    defaultValue={product.nombre}
                   />
                 </div>
 
@@ -48,6 +67,7 @@ const ProductFormEdit = () => {
                     className=" form-control"
                     name="descripcion"
                     placeholder="Descripcion"
+                    defaultValue={product.descripcion}
                   />
                 </div>
                 <div className="mb-3">
@@ -55,12 +75,14 @@ const ProductFormEdit = () => {
                     className=" form-control"
                     name="precio"
                     placeholder="Precio"
+                    defaultValue={product.precio}
                   />
                 </div>
                 <Field
                   className=" form-control"
                   name="cantidad"
                   placeholder="Cantidad"
+                  defaultValue={product.cantidad}
                 />
 
                 <div className="mt-3">

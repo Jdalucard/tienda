@@ -71,7 +71,7 @@ const LoginPage = () => {
         </div>
 
         <button type="submit" className="btn btn-dark">
-          {autenticar !== null ? navigate("/") : navigate("/login")}
+          {/*        {autenticar !== null ? navigate("/") : navigate("/login")} */}
           Enviar
         </button>
       </form>

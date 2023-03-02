@@ -1,31 +1,27 @@
-import React, { useEffect, useContext /* useState */ } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import ProductContext from "../context/ProductContext";
 
 import { useParams } from "react-router-dom";
 import ProductFormEdit from "../components/ProductFormEdit";
 
 const ProductPage = () => {
-  const { id } = useParams();
   const { unProducto, product } = useContext(ProductContext);
-  /*   const producto = product; */
-  /*   const [Producto, setProducto] = useState(producto); */
 
-  useEffect(() => {
+  const { id } = useParams();
+
+  /*   useEffect(() => {
     unProducto(id);
   }, [id, unProducto]);
-
-  if (
-    !product.nombre ||
-    !product.descripcion ||
-    product.precio ||
-    product.cantidad
-  ) {
-  }
-
-  useEffect(() => {}, []);
-  /*   useEffect(() => {}, []);
-  console.log(producto); */
-  console.log(product);
+ */
+  //actulizar producto new
+  /*   useEffect(() => {
+    const obtenerProducto = async () => {
+      const res = await unProducto(id);
+      console.log(res);
+    };
+    obtenerProducto();
+  }, [id, unProducto]);
+ */
   return (
     <>
       <main className="row pt-5">
