@@ -49,7 +49,7 @@ const ProductList = () => {
                 to={`/productos/${elemento.id}`}
                 className="btn btn-success mb-3 ms-5 "
               >
-                Ver mas cliente
+                Comprar
               </NavLink>
             </div>
           </div>
