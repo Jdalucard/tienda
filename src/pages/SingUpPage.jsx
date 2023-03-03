@@ -37,7 +37,7 @@ const SingUpPage = () => {
         <div className="mb-3">
           {/*   <p>{autenticar.id}</p> */}
           <label htmlFor="exampleInputEmail1" className="form-label">
-            Correo electronico
+            Correo electrónico
           </label>
           <input
             type="email"
