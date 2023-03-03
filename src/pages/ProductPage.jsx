@@ -7,9 +7,11 @@ import ProductList from "../components/ProductList";
 const Productspage = () => {
   return (
     <>
-      <Formulario />
+      <div className="container-fluid">
+        <Formulario />
 
-      <ProductList />
+        <ProductList />
+      </div>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useCallback, useReducer } from "react";
+import React, { useCallback, useReducer, useState } from "react";
 import ProductContext from "./ProductContext";
 import reducer from "./ProductReducer";
 import {
@@ -24,13 +24,12 @@ const initialState = {
       secure_url: "",
     },
   },
-  cart:[],
+  cart: [],
 };
-
 
 const Productstate = ({ children }) => {
   const [productosGlobales, dispatch] = useReducer(reducer, initialState);
-
+  const [posts, setPosts] = useState([]);
 
   // formulario
   const obtenerProductos = useCallback(async () => {
@@ -45,7 +44,7 @@ const Productstate = ({ children }) => {
         cantidad: obj.cantidad,
         createdAt: obj.createdAt,
         updatedAt: obj.updatedAt,
-        image: obj.image
+        image: obj.image,
       };
     });
 
@@ -75,7 +74,7 @@ const Productstate = ({ children }) => {
       cantidad: resp.datos.cantidad,
       createdAt: resp.datos.createdAt,
       updatedAt: resp.datos.updatedAt,
-      image: resp.datos.image
+      image: resp.datos.image,
     };
     dispatch({
       type: "UN_PRODUCTO",
@@ -86,8 +85,10 @@ const Productstate = ({ children }) => {
   //1 producto
   const actulizarProducto = async (id, formulario) => {
     try {
-      await actulizarProductoServices(id, formulario);
-      await obtenerProductos();
+      const res = await actulizarProductoServices(id, formulario);
+      setPosts(posts.map((post) => (post.id === id ? res : post)));
+
+      await unProducto();
     } catch (error) {
       console.log(error);
     }
@@ -101,8 +102,7 @@ const Productstate = ({ children }) => {
       console.log(error);
     }
   };
-  
-  
+
   const agregarProductoCarrito = (product) => {
     const productoEncontrado = productosGlobales.cart.find(
       (producto) => product.id === producto.id
@@ -116,7 +116,6 @@ const Productstate = ({ children }) => {
     }
   };
 
-  
   const eliminarProductoCarrito = (id) => {
     dispatch({
       type: "ELIMINAR_PRODUCTO_CARRITO",
@@ -135,9 +134,8 @@ const Productstate = ({ children }) => {
         product: productosGlobales.product,
         actulizarProducto,
         agregarProductoCarrito,
-        cart:productosGlobales.cart,
-        eliminarProductoCarrito
-       
+        cart: productosGlobales.cart,
+        eliminarProductoCarrito,
       }}
     >
       {children}

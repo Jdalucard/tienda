@@ -16,10 +16,9 @@ export const obtenerProductosService = async () => {
 export const crearProductoservices = async (formulario) => {
   const form = new FormData();
   for (let key in formulario) {
-
     form.append(key, formulario[key]);
   }
-  const resp= await axios.post(
+  const resp = await axios.post(
     "https://backecomerce.onrender.com/api/products",
     formulario,
     {
@@ -50,7 +49,7 @@ export const actulizarProductoServices = async (id, formulario) => {
 
   for (let key in formulario) {
     form.append(key, formulario[key]);
-  } 
+  }
   const resp = await axios.post(
     `https://backecomerce.onrender.com/api/products/${id}`,
     formulario,
@@ -61,7 +60,7 @@ export const actulizarProductoServices = async (id, formulario) => {
       },
     }
   );
-  console.log(resp);
+  console.log(resp.data);
   return resp.data;
 };
 

@@ -12,14 +12,19 @@ const initForm = {
 
 const LoginPage = () => {
   const [formulario, setformulario] = useState(initForm);
-  const { login /* autenticar */ } = useContext(AuthContext);
-  /* const navigate = useNavigate();
-   */
+  const { login, autenticar } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleForm = async (evento) => {
     evento.preventDefault();
 
     await login(formulario);
-    /*    navigate("/") */
+
+    if (autenticar === null) {
+      return null;
+    } else {
+      navigate("/");
+    }
   };
 
   const actualizo = (e) => {
