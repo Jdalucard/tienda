@@ -114,7 +114,7 @@ const ProductFormEdit = () => {
 
               <div className="mt-3 text-center">
                 <button className="btn btn-warning" type="submit">
-                  Actulizar Producto
+                  Actulizar
                 </button>
               </div>
             </Form>
