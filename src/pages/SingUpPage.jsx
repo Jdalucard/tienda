@@ -17,10 +17,11 @@ const SingUpPage = () => {
   const handleForm = async (evento) => {
     evento.preventDefault();
     await singup(formulario);
-    if (autenticar === null) {
-      return null;
-    } else {
+
+    if (autenticar !== null) {
       navigate("/");
+    } else {
+      return null;
     }
   };
 

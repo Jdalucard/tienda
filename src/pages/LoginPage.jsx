@@ -20,10 +20,10 @@ const LoginPage = () => {
 
     await login(formulario);
 
-    if (autenticar === null) {
-      return null;
-    } else {
+    if (autenticar !== null) {
       navigate("/");
+    } else {
+      return null;
     }
   };
 
