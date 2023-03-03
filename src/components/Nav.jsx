@@ -75,14 +75,11 @@ const Nav = () => {
                   </NavLink>
                 </li>
 
-                <li className="nav-item">
-                  <NavLink
-                    className="navbar-brand fs-3"
-                    to="/PageProductClient"
-                  >
+                {/*      <li className="nav-item">
+                  <NavLink className="navbar-brand fs-3" to="/products">
                     Producto Cliente
                   </NavLink>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <NavLink className="navbar-brand fs-3" to="/CartPage">

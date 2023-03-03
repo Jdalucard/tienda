@@ -71,7 +71,7 @@ const PageProductClient = () => {
                 <div className="accordion-body">
                   <strong>Título de la publicidad</strong>
                   Puedes colocar una oferta comercial o promociones vigentes
-                  <code></code>, overflow.
+                  <code></code>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@ const PageProductClient = () => {
               >
                 <div className="accordion-body">
                   <strong>Descripcion.</strong>
-                  <code></code>, aqui puedes colocar caracteristicas del tu
+                  <code></code>, aqui puedes colocar caracteristicas del
                   producto .
                 </div>
               </div>
