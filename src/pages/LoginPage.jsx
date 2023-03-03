@@ -62,6 +62,7 @@ const LoginPage = () => {
             className="form-control"
             id="inputPassword"
             onChange={actualizo}
+            placeholder="caracteres minimos 6"
             value={formulario.contraseña}
             name="contraseña"
           />

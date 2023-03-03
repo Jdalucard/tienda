@@ -75,6 +75,7 @@ const SingUpPage = () => {
             type="password"
             className="form-control"
             id="exampleInputPassword1"
+            placeholder="caracteres minimos 6"
             required
             name="contraseña"
             value={formulario.contraseña}
