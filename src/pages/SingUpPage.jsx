@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Titulos from "../components/Titulos";
 import { AuthContext } from "../context/AuthContext";
 import style from "./style.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const InitForm = {
   correo: "",
@@ -10,11 +11,17 @@ const InitForm = {
 };
 const SingUpPage = () => {
   const [formulario, setFomulario] = useState(InitForm);
-  const { singup /* autenticar */ } = useContext(AuthContext);
+  const { singup, autenticar } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleForm = async (evento) => {
     evento.preventDefault();
     await singup(formulario);
+    if (autenticar === null) {
+      return null;
+    } else {
+      navigate("/");
+    }
   };
 
   const actualizo = (evento) => {
