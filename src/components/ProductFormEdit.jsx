@@ -71,7 +71,7 @@ const ProductFormEdit = () => {
           enableReinitialize
         >
           {({ handleSubmit, setFieldValue }) => (
-            <Form className="w-50 p-3  mx-5" onSubmit={handleSubmit}>
+            <Form className="w-100 p-3  mx-5" onSubmit={handleSubmit}>
               <div className="mb-3 ">
                 <Field
                   className=" form-control"
