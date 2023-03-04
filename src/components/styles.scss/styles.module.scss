@@ -1,19 +1,18 @@
 .contenedorLista {
   display: flex;
   flex-wrap: wrap;
-
   margin-right: 20px;
+
   .first {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     padding: 10px;
     flex-wrap: wrap;
     margin-top: 20px;
-
     margin-right: 10px;
 
-    gap: 5px;
+    gap: 40px;
   }
 
   .card {
