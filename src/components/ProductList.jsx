@@ -28,6 +28,7 @@ const ProductList = () => {
                   src={elemento.image.secure_url}
                 />
               )}
+
               <div className={styles.bodyCard}>
                 <h5 className="card-title mt-2 ms-3 mb-3">{elemento.nombre}</h5>
                 <hr />
