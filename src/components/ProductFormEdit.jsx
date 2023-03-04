@@ -21,13 +21,7 @@ const initialState = {
 };
 
 const ProductFormEdit = () => {
-  const {
-    actulizarProducto,
-    unProducto /* crearProducto */,
-    /* product */
-
-    /* obtenerProductos */
-  } = useContext(ProductContext);
+  const { actulizarProducto, unProducto } = useContext(ProductContext);
 
   const [post, setpost] = useState({ initialState });
 
@@ -49,9 +43,9 @@ const ProductFormEdit = () => {
 
   return (
     <>
-      <div className=" mt-1 container d-flex flex-wrap">
+      <div className=" mt-1 container  justify-content-center d-flex flex-wrap">
         <div className="container">
-          <h2 className="mt-5  ms-5 mx-5 py-5">Actualizar Producto</h2>
+          <h2 className="mt-5  ms-5  py-5">Actualizar Producto</h2>
         </div>
 
         <Formik
@@ -71,7 +65,7 @@ const ProductFormEdit = () => {
           enableReinitialize
         >
           {({ handleSubmit, setFieldValue }) => (
-            <Form className="w-100 p-3  mx-5" onSubmit={handleSubmit}>
+            <Form className="w-100   mx-5" onSubmit={handleSubmit}>
               <div className="mb-3 ">
                 <Field
                   className=" form-control"
@@ -112,7 +106,7 @@ const ProductFormEdit = () => {
                 />
               </div>
 
-              <div className="mt-3 text-center">
+              <div className="mt-3 mb-3 text-center">
                 <button className="btn btn-warning" type="submit">
                   Actulizar
                 </button>
@@ -120,7 +114,8 @@ const ProductFormEdit = () => {
             </Form>
           )}
         </Formik>
-        <div>
+
+        <div className="container  ">
           <CardProduct />
         </div>
       </div>

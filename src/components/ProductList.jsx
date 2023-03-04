@@ -14,50 +14,52 @@ const ProductList = () => {
   return (
     <>
       <div className={styles.contenedorLista}>
-        {products.map((elemento) => (
-          <div
-            className="card mb-3 ms-5 "
-            key={elemento.id}
-            style={{ width: "20rem" }}
-          >
-            <div className="">
+        <div className={styles.first}>
+          {products.map((elemento) => (
+            <div
+              className={styles.card}
+              key={elemento.id}
+              style={{ width: "20rem" }}
+            >
               {elemento.image && (
                 <img
-                  className="card-img-top"
+                  className={styles.img}
                   alt={elemento.nombre}
                   src={elemento.image.secure_url}
                 />
               )}
-              <div className="card-body  ">
-                <h5 className="card-title ms-3 mb-3">{elemento.nombre}</h5>
+              <div className={styles.bodyCard}>
+                <h5 className="card-title mt-2 ms-3 mb-3">{elemento.nombre}</h5>
+                <hr />
                 <h5 className="card-title ms-3 mb-3">{elemento.precio}</h5>
                 <h5 className="card-title ms-3 mb-3">{elemento.descripcion}</h5>
                 <h5 className="card-title ms-3 mb-3">{elemento.cantidad}</h5>
               </div>
-              <div className="ms-4">
+              <div className={styles.containerBoton}>
                 <NavLink
                   to={`/products/${elemento.id}`}
-                  className="btn btn-info mb-3  "
+                  className="btn btn-info mb-2 ms-4 "
                 >
                   Ver mas...editor
                 </NavLink>
 
                 <button
                   onClick={() => eliminarProducto(elemento.id)}
-                  className="btn  ms-3 btn-danger mb-3 "
+                  className="btn  ms-3 btn-danger mb-2 "
                 >
                   Eliminar
                 </button>
+
+                <NavLink
+                  to={`/productos/${elemento.id}`}
+                  className="btn btn-success ms-4 mb-2 "
+                >
+                  Comprar
+                </NavLink>
               </div>
-              <NavLink
-                to={`/productos/${elemento.id}`}
-                className="btn btn-success mb-3 ms-4 "
-              >
-                Comprar
-              </NavLink>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
