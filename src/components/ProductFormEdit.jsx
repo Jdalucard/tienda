@@ -49,11 +49,11 @@ const ProductFormEdit = () => {
 
   return (
     <>
-      <div className="container">
-        <h2 className="mt-5  ms-5 mx-5 py-5">Actualizar Producto</h2>
-      </div>
+      <div className=" mt-1 container d-flex flex-wrap">
+        <div className="container">
+          <h2 className="mt-5  ms-5 mx-5 py-5">Actualizar Producto</h2>
+        </div>
 
-      <div className=" mt-1 container-fluid d-flex flex-wrap">
         <Formik
           initialValues={{
             post,
