@@ -1,33 +1,31 @@
-.Titulo{
- font-size: 18rem;
+.Titulo {
+  font-size: 18rem;
 }
- 
- .home{
+
+.home {
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
-} 
+}
 
-.singup{
+.singup {
   margin-top: 80px;
-  width: 60%;  
+  width: 60%;
   justify-content: center;
   line-height: 1.5;
   text-align: center;
   align-items: center;
   margin-left: 20%;
-  }
+}
 /*   .singup input{
     
   } */
 
-  .login{
-    margin-top: 80px;
-    width: 60%;
-    justify-content: center;
-    text-align: center;
-    margin-left: 20%;
-
-  }
+.login {
+  margin-top: 80px;
+  width: 60%;
+  justify-content: center;
+  text-align: center;
+  margin-left: 20%;
+}

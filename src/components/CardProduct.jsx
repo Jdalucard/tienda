@@ -11,7 +11,7 @@ const CardProduct = () => {
           className="card-img-top"
           alt="albun de discos"
         />
-        <div className="card-body">
+        <div className="card-body mb-4">
           <h5 className="card-title">{product.nombre}</h5>
           <hr />
           <p className="card-text">{product.descripcion}</p>
