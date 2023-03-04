@@ -26,16 +26,17 @@ const PageProductClient = () => {
                 {product.image && (
                   <img alt={product.nombre} src={product.image.secure_url} />
                 )}
-                <div className="card-body">
+                <div className="card-body text-center ">
                   {/*   <p className="card-text">{product.id}</p> */}
                   <h5 className="card-title">{product.nombre}</h5>
+                  <hr />
                   <p className="card-text">{product.descripcion}</p>
                   <p className="card-text">{product.precio}</p>
                   <p className="card-text">{product.cantidad}</p>
                   <NavLink to={"/CartPage"}>
                     <button
                       type="button"
-                      className="btn btn-info  p-2 ms-5 text-center "
+                      className="btn btn-info  p-2 ms-3 text-center "
                       onClick={AgregarAlCarro}
                     >
                       Agregar al carro{" "}
