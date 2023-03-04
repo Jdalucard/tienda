@@ -5,13 +5,13 @@ const CardProduct = () => {
   const { product } = useContext(ProductContext);
   return (
     <>
-      <div className="card text-sm-center" style={{ width: "20rem" }}>
+      <div className="card text-sm-center mb-4" style={{ width: "20rem" }}>
         <img
           src={product.image.secure_url}
           className="card-img-top"
           alt="albun de discos"
         />
-        <div className="card-body mb-4">
+        <div className="card-body ">
           <h5 className="card-title">{product.nombre}</h5>
           <hr />
           <p className="card-text">{product.descripcion}</p>

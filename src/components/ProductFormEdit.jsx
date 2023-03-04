@@ -115,7 +115,7 @@ const ProductFormEdit = () => {
           )}
         </Formik>
 
-        <div className="container  ">
+        <div className="container ">
           <CardProduct />
         </div>
       </div>
