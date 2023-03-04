@@ -78,7 +78,7 @@ const ProductFormEdit = () => {
                 <Field
                   className=" form-control"
                   name="descripcion"
-                  placeholder="Descripcion"
+                  placeholder="Descripción"
                 />
               </div>
               <div className="mb-3">
@@ -108,7 +108,7 @@ const ProductFormEdit = () => {
 
               <div className="mt-3 mb-3 text-center">
                 <button className="btn btn-warning" type="submit">
-                  Actulizar
+                  Actualizar
                 </button>
               </div>
             </Form>
