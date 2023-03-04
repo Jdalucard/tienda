@@ -1,8 +1,8 @@
 import React from "react";
-import image from "./IMG/fideos.jpg";
-import image2 from "./IMG/Hamburguesa.jpg";
-import image3 from "./IMG/Menu-camarones.jpg";
-import image4 from "./IMG/tacos.jpg";
+import image from "./IMG/info3.jpeg";
+import image2 from "./IMG/post3.jpeg";
+import image3 from "./IMG/post5.jpeg";
+import image4 from "./IMG/post6.jpeg";
 import styles from "./styles.scss/styles.module.scss";
 import { NavLink } from "react-router-dom";
 
