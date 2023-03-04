@@ -1,14 +1,14 @@
 .contenedorLista {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  gap: 25px;
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
+  gap: 15px;
+  justify-content: first baseline;
 
+  /*   .img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  } */
   li {
     display: block;
   }
@@ -35,6 +35,7 @@
 .card:hover {
   transform: translateY(-15px);
 } */
+
 //formulario
 .container-fluid {
   margin-top: 100px;

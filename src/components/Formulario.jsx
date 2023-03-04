@@ -22,9 +22,10 @@ const Formulario = () => {
   return (
     <>
       <div className="container-fluid mb-5">
-        <h1>Registro Producto</h1>
-        <div className=" container mt-5 d-flex justify-content-center align-items-center">
-          <h1 className="p-5 m-">Registro del Producto</h1>
+        <div className=" container   mt-5 d-flex flex-wrap justify-content-center align-items-center">
+          <div className="container mt-4 mb-2 pt-3 ms-5 justify-content-center  ">
+            <h1 className=" ">Registro del Producto</h1>
+          </div>
           <Formik
             initialValues={initialState}
             validationSchema={Yup.object({
