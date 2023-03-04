@@ -36,12 +36,12 @@ const ProductList = () => {
                 <h5 className="card-title ms-3 mb-3">{elemento.descripcion}</h5>
                 <h5 className="card-title ms-3 mb-3">{elemento.cantidad}</h5>
               </div>
-              <div className={styles.containerBoton}>
+              <div className="container">
                 <NavLink
                   to={`/products/${elemento.id}`}
-                  className="btn btn-info mb-2 ms-4 "
+                  className="btn btn-info mb-2 ms-3 "
                 >
-                  Ver mas...editor
+                  Editor
                 </NavLink>
 
                 <button
@@ -53,7 +53,7 @@ const ProductList = () => {
 
                 <NavLink
                   to={`/productos/${elemento.id}`}
-                  className="btn btn-success ms-4 mb-2 "
+                  className="btn btn-success ms-2 mb-2 "
                 >
                   Comprar
                 </NavLink>

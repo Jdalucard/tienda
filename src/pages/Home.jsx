@@ -6,6 +6,7 @@ import ProductList from "../components/ProductList";
 /* import IndexProducts from "../components/Products/IndexProducts"; */
 import style from "./style.module.scss";
 import Silder from "../components/Silder";
+import Productdemos from "../components/Productdemos";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         {/*     <Cart/> */}
         {/*   <IndexProducts /> */} */
         <Silder />
+        <Productdemos />
         <ProductList />
       </div>
 
