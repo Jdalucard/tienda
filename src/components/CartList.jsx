@@ -33,7 +33,7 @@ const CartList = () => {
                   <NavLink to={"/"}>
                     <button className="btn btn-primary">
                       {" "}
-                      Ver mas productos
+                      Ve más productos
                     </button>
                   </NavLink>
                 </td>
