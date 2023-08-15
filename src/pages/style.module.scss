@@ -3,11 +3,9 @@
 }
 
 .home {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+display: flex;  
+flex-direction: column;
+flex-wrap: wrap;
 }
 
 .singup {
@@ -29,4 +27,16 @@
   justify-content: center;
   text-align: center;
   margin-left: 20%;
+}
+@media (max-width: 1024px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+   
+  
+  }
+
+
 }
