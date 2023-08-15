@@ -70,13 +70,12 @@
   .first {
     display: grid ;
     grid-template-columns: repeat(2,1fr);
-
   }
  
  
 }
 
-@media (max-width: 640px) {
+@media (max-width: 728px) {
 
   .first {  
   flex-direction: column;
